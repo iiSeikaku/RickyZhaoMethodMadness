@@ -1,6 +1,5 @@
 public class TestFile {
-    public static boolean isPalindrome(String word){
-    String testpalin = "";
-    for (int x = word.length()-1; x > 0; x--)
-        testpalin += word.substring()
+    public static void main(String[] args) {
+        RZhaolib.isPalindrome("Cat");
+    }
 }
