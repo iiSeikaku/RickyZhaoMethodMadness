@@ -15,18 +15,18 @@ public class RZhaolib {
 
 
 public static void fooBarBaz(int num1) {
-    String f = "foo";
-    String br = "bar";
+    String foo = "foo";
+    String bar = "bar";
     String ber = "baz";
     for (int i = 0; i < num1; i++) {
         if (i % 3 == 0 && i % 5 != 0) {
-            System.out.println(f);
+            System.out.println(foo);
         }
         if (i%3!=0 %% i%5==0){
-            System.out.println(br);
+            System.out.println(bar);
         }
         if (i%3==0 && i%5==0){
-            System.out.println(ber)
+            System.out.println(ber);
         }
         else
         {
@@ -37,10 +37,22 @@ public static void fooBarBaz(int num1) {
 }
 
 public static String cutOut(String mainstr, String substr){
-        int cutlen = substr.length();
-    int indexOf(substr);
+        int length = substr.length();
+        int place = mainstr.indexOf(substr);
+        if (place == -1){
+            return mainstr;
+        }
+        else{
+            if(place == 0){
+                return (mainstr.substring(length));
+                else {
+                    return mainstr.substring(0, place) + mainstr.substring(place+substr.length()-1, mainstr.length());
+                }
+            }
+        }
+
     }
-}
+
 
 public static int sumUpTo(int num2){
     int intsum = 0;
