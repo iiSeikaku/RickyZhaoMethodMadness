@@ -99,7 +99,11 @@ public class RZhaolib {
         }
     }
 
-    //This prints out a snail. I made it while I was procrastinating, and thought you might like it.
+    /** This prints out a snail. I made it while procrastinating, and thought you might like it.
+     * The snail is a throwback to my middle school days, back when I used to doodle snails on the desk in social studies.
+     * I didn't know how to get the \ alone, it would come up with an illegal escape character in string literal.
+     * Also didn't know that the \\ only showed the first one, but I but by the time I finished I didn't want to change it anymore.
+     */
     public static int drawSnail(int num){
         if (num==1){
             System.out.println("         ___________                 ");
