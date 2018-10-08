@@ -7,9 +7,11 @@ public class RZhaolib {
      */
 
 
-    /** Created isPalindrome by reversing the input string, and initially I tried to return false by checking
-     * to see if each character of the created string was the same as the input string.
-     * Later settled for .equals to return true or false, much simpler.
+    /**
+     * Checks to see if a word is the same in reverse.
+     *
+     * @param word This input is reversed using another string, and then compared to see if they are the same.
+     * @return Returns true if the reversed string is equal to the input.
      */
     public static boolean isPalindrome(String word) {
         String testpalin = "";
@@ -25,12 +27,10 @@ public class RZhaolib {
         }
     }
 
-    /** tested foobarbaz and realized that it wasnt printing out the last number.
-     *  Changed the condition from i<num1 to i<=num1
-     *  Issues also arose because the first if under the for loop I put %% instead of &&
-     *  Wasn't able to spot it for a long amount of time.
-     *  Using these if statements under a for loop, it checks to see whether the numbers are remainders of either
-     *  3, 5, or both and then prints out foo, bar, and baz, respectively.
+    /**
+     * Replaces multiples of 3 by foo, 5 by bar, both 3 and 5 by baz, all the way to the input.
+     *
+     * @param num1 All numbers from 1 to this input are checked, and replaced necessary.
      */
     public static void fooBarBaz(int num1) {
         String f = "foo";
@@ -52,11 +52,12 @@ public class RZhaolib {
         }
     }
 
-    /** First I determined that I needed to set a variable to determine the length of the substring.
-     *  Another variable would be used to determine where the substring was located.
-     *  After that, if the substring didn't show up it would just return the mainstring. If the index was 0, it would
-     *  return the main string from 0 + the length of the substring. If it was past 0, the code would return the
-     *  main string from 0 to the index, then add another substring from index + length to the end of the string.
+    /**
+     * Cuts out a word the first time it appears in a main string.
+     *
+     * @param mainstr Main string from which the word is cut.
+     * @param substr  The word that is cut from the main string.
+     * @return The main string without the substring the first time it appears.
      */
     public static String cutOut(String mainstr, String substr) {
         int cutlen = substr.length();
@@ -66,17 +67,20 @@ public class RZhaolib {
             return mainstr;
         } else {
             if (place == 0) {
-                System.out.println(mainstr.substring(place+cutlen));
+                System.out.println(mainstr.substring(place + cutlen));
                 return mainstr.substring(place + cutlen);
             } else {
-                System.out.println(mainstr.substring(0,place)+mainstr.substring(place+cutlen));
+                System.out.println(mainstr.substring(0, place) + mainstr.substring(place + cutlen));
                 return mainstr.substring(0, place) + mainstr.substring(place + cutlen);
             }
         }
     }
 
-    /** This one I just used a for loop to keep adding on to the created variable intsum using increasing value p,
-     * until p is equal to the number.
+    /**
+     * Adds all integers from 0 to the input together.
+     *
+     * @param num The amount of numbers added, and the greatest number that is added.
+     * @return All the numbers from 0 to input added together.
      */
     public static int sumUpTo(int num) {
         int intsum = 0;
@@ -87,33 +91,19 @@ public class RZhaolib {
         return intsum;
     }
 
-    /** This was the last method created. Knowing that System.out.println() in the for loop would print out the numbers
-     * in a straight line after testing, I edited the characters inside the parentheses of println() until I had something
-     * that resembled a table. After that, I added System.out.println before the for loop to make it look more like a table.
+    /**
+     * Multiplies the base with a range of numbers to create a multiplication table for that base.
+     *
+     * @param base  The number that is multiplied with the others.
+     * @param range The numbers starting from 0 that are multiplied with the base.
      */
-    public static void multiplicationTable(int base, int range){
+    public static void multiplicationTable(int base, int range) {
         System.out.println("    " + base);
         System.out.println("    _");
-        for (int i = 0; i <= range; i++){
-            System.out.println(i + " | " + base*i);
+        for (int i = 0; i <= range; i++) {
+            System.out.println(i + " | " + base * i);
         }
     }
 
-    /** This prints out a snail. I made it while procrastinating.
-     * The snail is a throwback to 7th grade, back when I used to doodle snails on the desk in social studies.
-     * I didn't know how to get the \ alone, it would come up with an illegal escape character in string literal.
-     * Also didn't know that the \\ only showed the first one, but I but by the time I finished I didn't want to change it anymore.
-     */
-    public static int drawSnail(int num){
-        if (num==1){
-            System.out.println("         ___________                 ");
-            System.out.println("       //           \\               ");
-            System.out.println("      ||   _-----_   ||  - __ -      ");
-            System.out.println("      ||  ||  --     || _|    |      ");
-            System.out.println("       \\_ \\__/___-//  /       /    ");
-            System.out.println("       /__________________  /        ");
-        }
-        return 7;
-    }
 }
 
