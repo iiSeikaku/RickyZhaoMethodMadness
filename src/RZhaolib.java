@@ -99,8 +99,8 @@ public class RZhaolib {
         }
     }
 
-    /** This prints out a snail. I made it while procrastinating, and thought you might like it.
-     * The snail is a throwback to my middle school days, back when I used to doodle snails on the desk in social studies.
+    /** This prints out a snail. I made it while procrastinating.
+     * The snail is a throwback to 7th grade, back when I used to doodle snails on the desk in social studies.
      * I didn't know how to get the \ alone, it would come up with an illegal escape character in string literal.
      * Also didn't know that the \\ only showed the first one, but I but by the time I finished I didn't want to change it anymore.
      */
@@ -113,7 +113,7 @@ public class RZhaolib {
             System.out.println("       \\_ \\__/___-//  /       /    ");
             System.out.println("       /__________________  /        ");
         }
-        return 5;
+        return 7;
     }
 }
 
