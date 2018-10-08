@@ -6,8 +6,10 @@ public class RZhaolib {
             testpalin += word.charAt(x - 1);
         }
         if (testpalin.equals(word)) {
+            System.out.println(true);
             return true;
         } else {
+            System.out.println(false);
             return false;
         }
     }
@@ -17,7 +19,7 @@ public class RZhaolib {
         String f = "foo";
         String br = "bar";
         String ber = "baz";
-        for (int i = 0; i < num1; i++) {
+        for (int i = 1; i <= num1; i++) {
             if (i % 3 == 0 && i % 5 != 0) {
                 System.out.println(f);
             }
@@ -37,11 +39,14 @@ public class RZhaolib {
         int cutlen = substr.length();
         int place = mainstr.indexOf(substr);
         if (place < 0) {
+            System.out.println(mainstr);
             return mainstr;
         } else {
             if (place == 0) {
+                System.out.println(mainstr.substring(place+cutlen));
                 return mainstr.substring(place + cutlen);
             } else {
+                System.out.println(mainstr.substring(0,place)+mainstr.substring(place+cutlen));
                 return mainstr.substring(0, place) + mainstr.substring(place + cutlen);
             }
         }
@@ -52,7 +57,17 @@ public class RZhaolib {
         for (int p = 0; p <= num2; p++) {
             intsum += p;
         }
+        System.out.println(intsum);
         return intsum;
     }
+
+    public static void multiplicationTable(int base, int range){
+        System.out.println("    " + base);
+        System.out.println("    _");
+        for (int i = 0; i <= range; i++){
+            System.out.println(i + " | " + base*i);
+        }
+    }
+
 }
 
